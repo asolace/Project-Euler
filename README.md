@@ -9,3 +9,5 @@ Of course you can always Wikipedia for in-depth understanding
 * 09 Pythagorean Triples
 	- [Link](https://www.mathsisfun.com/pythagorean_triples.html)
 	- [Video](https://www.youtube.com/watch?v=nT_PiONR1RE)
+* 14 Collatz Sequence 
+	- [Video](https://www.youtube.com/watch?v=5mFpVDpKX70)
