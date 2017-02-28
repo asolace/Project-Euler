@@ -29,7 +29,7 @@ def collatzOf(num)
 		i = starting
 		chain = 0
 		while (i != 1) && (i >= starting)
-			i = i.even? ? i / 2 : 3 * i + 1
+			i = i.even? ? i / 2 : (3 * i + 1) / 2
 			chain += 1
 		end
 		chain += @memo[i]
