@@ -12,7 +12,97 @@
 # 115 (one hundred and fifteen) contains 20 letters.
 # The use of "and" when writing out numbers is in compliance with British usage.
 
-def numLetterCounter(start, end)
+@ONES = {
+  1 => 3,
+  2 => 3,
+  3 => 5,
+  4 => 4,
+  5 => 4,
+  6 => 3,
+  7 => 5,
+  8 => 5,
+  9 => 4
+}
+
+@ENTY = {
+  20 => 6,
+  30 => 6,
+  40 => 5,
+  50 => 5,
+  60 => 5,
+  70 => 7,
+  80 => 6,
+  90 => 6
+}
+
+@TEENS = {
+  10 => 3,
+  11 => 6,
+  12 => 6,
+  13 => 8,
+  14 => 8,
+  15 => 7,
+  16 => 7,
+  17 => 9,
+  18 => 8,
+  19 => 8
+}
+
+@IONS = {
+  100 => 7,
+  1000 => 8,
+  1_000_000 => 7,
+  1_000_000_000 => 7,
+  1_000_000_000_000 => 8
+}
+
+def counter(n)
+	case n
+	when (0..9)
+		@ONES[n]
+	when (10..19)
+		@TEENS[n]
+	when (20..99)
+		enties(n)
+	else
+		large_digits(n)
+	end
 end
 
-numLetterCounter(1, 5)
+def enties(n)
+	result = @ENTY[(n / 10) * 10]
+	
+	if n % 10 != 0
+		result += @ONES[(n % 10)]
+	end
+
+	result
+end
+
+def large_digits(n)
+	# size: Gets they key in IONS object
+	size = @IONS.keys.take_while { |size| size <= n }.last
+	result = counter(n / size) + @IONS[size]
+
+
+	if (n % size) != 0
+		result += (counter(n % size) + 3)
+	end
+
+	result
+end
+
+def numLetterCounter(start, finish)
+	result = 0
+
+	(start..finish).each do |n|
+		result += counter(n)
+	end
+
+	result
+end
+
+# Can input ranges instead of 1..n
+puts numLetterCounter(1, 1000)
+
+

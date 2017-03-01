@@ -27,4 +27,4 @@ def specPythTrip(sum)
 end
 
 
-puts specPythTrip(100)
+puts specPythTrip(1000)
