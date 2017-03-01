@@ -1,9 +1,10 @@
 # Project-Euler
+![alt tag](https://media.giphy.com/media/DqD0pMdvIYYEw/giphy.gif)
 
 https://projecteuler.net/archives
 
 Some problems needs outside knowledge.<br> In such cases I've included my favorite, easy understanding resources that can help. <br>
-Of course you can always Wikipedia for in-depth understanding
+Of course you can always Wikipedia for in-depth understanding.
 
 ## Problems that may need understanding:
 * 09 Pythagorean Triples
