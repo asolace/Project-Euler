@@ -2,7 +2,7 @@
 
 https://projecteuler.net/archives
 
-Some problems needs outside knowledge. In such case I've included my favorite, easy understanding resources that can help. <br>
+Some problems needs outside knowledge.<br> In such cases I've included my favorite, easy understanding resources that can help. <br>
 Of course you can always Wikipedia for in-depth understanding
 
 ## Problems that may need understanding:
@@ -19,4 +19,4 @@ Of course you can always Wikipedia for in-depth understanding
 
 ### Notes:
 * 17 Number Letter Counts
-	- Very similar to [In_Word](http://testfirst.org/live/learn_ruby/in_words) from Code like this [Labs](http://codelikethis.com/lessons) -- [Solution](https://github.com/asolace/Bootcamp-Prep/blob/master/Codelikethis-Labs/aA-Prepwork/lib/15_in_words.rb) 
+	- Very similar to [In_Word](http://testfirst.org/live/learn_ruby/in_words) from Code like this [Labs](http://codelikethis.com/lessons) -- [Solution](https://github.com/asolace/Bootcamp-Prep/blob/master/Codelikethis-Labs/aA-Prepwork/lib/15_in_words.rb)
