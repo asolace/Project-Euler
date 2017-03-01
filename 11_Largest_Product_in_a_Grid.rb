@@ -1,10 +1,10 @@
 # Largest product in a grid
 # Problem 11
-
-# In the 20×20 grid below, four numbers along a diagonal line have 
+#
+# In the 20×20 grid below, four numbers along a diagonal line have
 # been marked in red.
 
-numbers = 
+numbers =
 "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
 81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -29,7 +29,7 @@ numbers =
 # The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 # 26 at line 13
 
-# What is the greatest product of four adjacent numbers in the same 
+# What is the greatest product of four adjacent numbers in the same
 # direction (up, down, left, right, or diagonally) in the 20×20 grid?
 
 def lpiag(numbers)
@@ -37,37 +37,37 @@ def lpiag(numbers)
 		.split("\n")
 		.map { |x| x.split(" ")
 		.map { |x| x.to_i } }
-	 
+
 	# Vertical
 	max, product = 0, 0
-	(0..15).each do |x| 
-	  (0..18).each do |y| 
-	    product = grid[y][x] * grid[y][x + 1] * grid[y][x + 2] * grid[y][x + 3] 
-	    max = product if product > max 
+	(0..15).each do |x|
+	  (0..18).each do |y|
+	    product = grid[y][x] * grid[y][x + 1] * grid[y][x + 2] * grid[y][x + 3]
+	    max = product if product > max
 	  end
 	end
-	 
+
 	# horizontal
-	(0..18).each do |x| 
-	  (0..15).each do |y| 
-	    product = grid[y][x] * grid[y + 1][x] * grid[y + 2][x] * grid[y + 3][x] 
-	    max = product if product > max 
+	(0..18).each do |x|
+	  (0..15).each do |y|
+	    product = grid[y][x] * grid[y + 1][x] * grid[y + 2][x] * grid[y + 3][x]
+	    max = product if product > max
 	  end
 	end
-	 
+
 	# diagonal right
-	(0..15).each do |x| 
-	  (0..15).each do |y| 
-	    product = grid[y][x] * grid[y + 1][x + 1] * grid[y + 2][x + 2] * grid[y + 3][x + 3] 
-	    max = product if product > max 
+	(0..15).each do |x|
+	  (0..15).each do |y|
+	    product = grid[y][x] * grid[y + 1][x + 1] * grid[y + 2][x + 2] * grid[y + 3][x + 3]
+	    max = product if product > max
 	  end
 	end
-	 
+
 	# diagonal left
-	(0..15).each do |x| 
-	  (0..15).each do |y| 
-	    product = grid[y][x + 3] * grid[y + 1][x + 2] * grid[y + 2][x + 1] * grid[y + 3][x] 
-	    max = product if product > max 
+	(0..15).each do |x|
+	  (0..15).each do |y|
+	    product = grid[y][x + 3] * grid[y + 1][x + 2] * grid[y + 2][x + 1] * grid[y + 3][x]
+	    max = product if product > max
 	  end
 	end
 

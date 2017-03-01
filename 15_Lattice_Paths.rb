@@ -1,15 +1,15 @@
 # Lattice paths
 # Problem 15
-
+#
 # Starting in the top left corner of a 2×2 grid,
 # and only being able to move to the right and down,
 # there are exactly 6 routes to the bottom right corner.
 # 	See image in ./img folder
 # How many such routes are there through a 20×20 grid?
-
+#
 # Formula n! / (k! (k-n)!)
 # n = total decisions to make
-
+#
 ### This is an example of a grid model as an array
 # [
 # 	[1,1,1],

@@ -1,10 +1,10 @@
 # Largest product in a series
 # Problem 8
-
-# The four adjacent digits in the 1000-digit number that have the 
+#
+# The four adjacent digits in the 1000-digit number that have the
 # greatest product are 9 × 9 × 8 × 9 = 5832.
 
-num = 
+num =
 73167176531330624919225119674426574742355349194934,
 96983520312774506326239578318016984801869478851843,
 85861560789112949495459501737958331952853208805511,
@@ -21,13 +21,13 @@ num =
 16427171479924442928230863465674813919123162824586,
 17866458359124566529476545682848912883142607690042,
 242190226710556263211111093705442175069416589604080, # Reason for the indent is
-7198403850962455444362981230987879927244284909188,	 # because it can not have 
+7198403850962455444362981230987879927244284909188,	 # because it can not have
 845801561660979191338754992005240636899125607176060, # 0 as a beginning value.
 5886116467109405077541002256983155200055935729725,	 # This num turns into an
 71636269561882670428252483600823257530420752963450	 # array! -- num.join
 
 
-# Find the thirteen adjacent digits in the 1000-digit number that 
+# Find the thirteen adjacent digits in the 1000-digit number that
 # have the greatest product. What is the value of this product?
 
 def lpias(num, digits)
@@ -47,4 +47,3 @@ def lpias(num, digits)
 end
 
 puts lpias(num, 13)
-
