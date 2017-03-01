@@ -19,4 +19,4 @@ Of course you can always Wikipedia for in-depth understanding
 
 ### Notes:
 * 17 Number Letter Counts
-	- Very similar to [In_Word](http://testfirst.org/live/learn_ruby/in_words) [Solution](https://github.com/asolace/Bootcamp-Prep/blob/master/Codelikethis-Labs/aA-Prepwork/lib/15_in_words.rb) from Code like this [Labs](http://codelikethis.com/lessons)
+	- Very similar to [In_Word](http://testfirst.org/live/learn_ruby/in_words) from Code like this [Labs](http://codelikethis.com/lessons) -- [Solution](https://github.com/asolace/Bootcamp-Prep/blob/master/Codelikethis-Labs/aA-Prepwork/lib/15_in_words.rb) 
