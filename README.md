@@ -1,4 +1,4 @@
-![alt tag](https://github.com/asolace/Project-Euler/blob/master/img/project-euler.png)<br>
+# Project-Euler
 ![alt tag](https://github.com/asolace/Project-Euler/blob/master/img/math_class.gif)
 
 https://projecteuler.net/archives
