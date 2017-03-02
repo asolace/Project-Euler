@@ -43,7 +43,7 @@ def maxPathSum(triangle)
 
   (array.length - 1).downto(0) do |i|
     0.upto(i-1) do |j|
-      array [i-1][j] += [array [i][j], array [i][j+1]].max
+      array[i-1][j] += [ array[i][j], array[i][j+1] ].max
     end
   end
 
@@ -51,3 +51,44 @@ def maxPathSum(triangle)
 end
 
 puts maxPathSum(TRIANGLE2)
+
+### To understand lines 44 - 48 more clearly, visualy: ###
+We will demostrate TRIANGLE1 as example:
+
+TRIANGLE1 = "   3
+              7   4
+            2   4   6
+          8   5   9   3"
+
+=begin
+[[3], [7, 4], [2, 4, 6], [8, 5, 9, 3]]
+
+  See pyramid for reference and visual guidence
+  -- This is the 2nd to last layer --
+    2
+    [8, 5]  # 2 compares 8 & 5 (.max which is 8) so 2 += 8 (10)
+    [... , [10, 4, 6], [8, 5, 9, 3]]
+
+    4
+    [5, 9] # 4 compares 5 & 9 (.max which is 9) so 4 += 9 (13)
+    [... , [10, 13, 6], [8, 5, 9, 3]]
+
+    6
+    [9, 3]
+    [... , [10, 13, 15], [8, 5, 9, 3]]
+
+      -- This is the upper layer --
+        7
+        [10, 13]
+        [[3], [20, 4], [10, 13, 15], [8, 5, 9, 3]]
+
+        4
+        [13, 15]
+        [[3], [20, 19], [10, 13, 15], [8, 5, 9, 3]]
+
+          -- This is the top --
+            3
+            [20, 19]
+            [[23], [20, 19], [10, 13, 15], [8, 5, 9, 3]]
+
+=end
