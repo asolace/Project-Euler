@@ -12,3 +12,26 @@
 # 142; so d(284) = 220.
 #
 # Evaluate the sum of all the amicable numbers under 10000.
+
+def sumFactors(n)
+	sum = 1
+	(2...Math.sqrt(n)).each do |num|
+		sum += n / num + num if n % num == 0	
+	end
+	sum
+end
+
+
+def amicableNumSum(start, finish)
+	amicableNums = 0
+
+	(start..finish).each do |n|
+		if (n == sumFactors(sumFactors(n)) && sumFactors(n) != n)
+			amicableNums += n
+		end
+	end
+
+	amicableNums
+end
+
+p amicableNumSum(0, 10_000)
