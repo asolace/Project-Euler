@@ -17,6 +17,7 @@ Of course you can always Wikipedia for in-depth understanding.
 	- [Link2 Visual](http://www.robertdickau.com/lattices.html)
 	- [Video](https://www.youtube.com/watch?v=JFJqrmfJtUY)
 * 21 Amicable Numbers
+	- [Video](https://www.youtube.com/watch?v=fUSZBVYZdKY)
 
 
 ### Notes:
