@@ -18,7 +18,7 @@
 
 def sundayCounter
   days = [31,28,31,30,31,30,31,31,30,31,30,31]
-  date, sundays = 0, 0, 0
+  date, sundays = 0, 1
 
   (1901...2000).each do
     (0..11).each do |month|
@@ -26,7 +26,6 @@ def sundayCounter
       sundays += 1 if date == 6
     end
   end
-  sundays += 1
   sundays
 end
 
