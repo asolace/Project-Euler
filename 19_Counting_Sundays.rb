@@ -32,7 +32,6 @@ end
 
 puts sundayCounter
 
-#### Above,
 #### Below, using date library ####
 
 require 'date'
