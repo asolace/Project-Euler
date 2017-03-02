@@ -3,17 +3,15 @@
 #
 # By starting at the top of the triangle below and moving to adjacent numbers
 # on the row below, the maximum total from top to bottom is 23.
-TRIANGLE1 = "
-            3
-          7   4
-        2   4   6
-      8   5   9   3
-"
+TRIANGLE1 = "   3
+              7   4
+            2   4   6
+          8   5   9   3"
+
 # That is, 3 + 7 + 4 + 9 = 23.
 #
 # Find the maximum total from top to bottom of the triangle below:
-TRIANGLE2 = "
-                              75
+TRIANGLE2 = "                 75
                             95  64
                           17  47  82
                         18  35  87  10
@@ -27,19 +25,29 @@ TRIANGLE2 = "
         70  11  33  28  77  73  17  78  39  68  17  57
       91  71  52  38  17  14  91  43  58  50  27  29  48
     63  66  04  68  89  53  67  30  73  16  69  87  40  31
-  04  62  98  27  23  09  70  98  73  93  38  53  60  04  23
-"
+  04  62  98  27  23  09  70  98  73  93  38  53  60  04  23"
+
 # NOTE: As there are only 16384 routes,
 # it is possible to solve this problem by trying every route.
 # However, Problem 67, is the same challenge with a triangle containing
 # one-hundred rows; it cannot be solved by brute force,
 # and requires a clever method! ;o)
 
+
 def maxPathSum(triangle)
-  array = triangle.split("\n").map! do |str|
-    str.chars.select {|c| c != " "}
+  # Setting up 2d array from the triangle string.
+  array = triangle
+    .split("\n")
+    .map! { |c| c.split(" ")
+    .map! { |c| c.to_i } }
+
+  (array.length - 1).downto(0) do |i|
+    0.upto(i-1) do |j|
+      array [i-1][j] += [array [i][j], array [i][j+1]].max
+    end
   end
-  array.shift
-  array
+
+  array.first.first
 end
-p maxPathSum(TRIANGLE1)
+
+puts maxPathSum(TRIANGLE2)
