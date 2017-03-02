@@ -52,8 +52,8 @@ end
 
 puts maxPathSum(TRIANGLE2)
 
-### To understand lines 44 - 48 more clearly, visualy: ###
-We will demostrate TRIANGLE1 as example:
+# ### To understand lines 44 - 48 more clearly/visualy: ###
+# We will demostrate TRIANGLE1 as example:
 
 TRIANGLE1 = "   3
               7   4
@@ -87,8 +87,8 @@ TRIANGLE1 = "   3
         [[3], [20, 19], [10, 13, 15], [8, 5, 9, 3]]
 
           -- This is the top --
-            3
-            [20, 19]
+            3           # As everything is finish comparing (.max)
+            [20, 19]    # top value stored at array[0][0]
             [[23], [20, 19], [10, 13, 15], [8, 5, 9, 3]]
 
 =end
