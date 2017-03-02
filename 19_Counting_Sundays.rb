@@ -32,6 +32,9 @@ end
 
 puts sundayCounter
 
+
+
+
 #### Below, using date library ####
 
 require 'date'
@@ -51,3 +54,57 @@ starting_date = Date.new(1901, 1, 1)
 ending_date = Date.new(2000, 12, 31)
 
 puts sundayCounter2(starting_date, ending_date)
+
+
+
+
+## Another awesome solution by:
+## https://ruby.janlelis.de/37-project-euler-19-20-21-22-23-24-25-ruby
+
+class << SundayCounter = Module.new  # same as module SundayCounter; class << self
+  START_YEAR = 1900
+  END_YEAR   = 2000
+
+  def leap_year?(y)
+    y % 400 == 0  or
+    ( y % 4 == 0 and y % 100 != 0 )
+  end
+
+  def month_length_of(m)
+    [31, @february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m]
+  end
+
+  def set_february(year)
+     @february = 28 + ( leap_year?(year) ? 1 : 0 )
+  end
+
+  def count
+    sundays  = 0
+    day      = 0
+    month    = 0
+    count_activated = false
+    year     = START_YEAR
+    set_february( year )
+
+    while year <= END_YEAR
+      sundays += 1  if day == 6 && count_activated
+
+      day = (day + 7) % month_length_of(month)
+
+      if day < 7 # new month reached
+        month = (month + 1) % 12
+
+        if month.zero? # new year reached
+          year += 1
+          set_february( year )
+          count_activated = true # don't count the first year
+        end
+
+      end
+    end
+
+    sundays
+  end
+end
+
+puts SundayCounter.count
