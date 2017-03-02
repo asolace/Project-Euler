@@ -16,6 +16,7 @@ Of course you can always Wikipedia for in-depth understanding.
 	- [Link](https://copingwithcomputers.com/2013/07/06/lattice-paths/)
 	- [Link2 Visual](http://www.robertdickau.com/lattices.html)
 	- [Video](https://www.youtube.com/watch?v=JFJqrmfJtUY)
+* 21 Amicable Numbers
 
 
 ### Notes:
