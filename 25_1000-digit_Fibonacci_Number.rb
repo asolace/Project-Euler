@@ -55,7 +55,7 @@ puts fib1kDigit
 #### http://johnnycoder.com/blog/2010/07/19/project-euler-25-ruby/ ####
 
 
-answer = -1
+answer =- 1
 previous = 0
 i = 1
 while i.to_s.length < 1000
