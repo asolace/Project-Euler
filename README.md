@@ -24,3 +24,4 @@ Of course you can always Wikipedia for in-depth understanding.
 * 17 Number Letter Counts
 	- Very similar to [In_Word](http://testfirst.org/live/learn_ruby/in_words) from Code like this [Labs](http://codelikethis.com/lessons) -- [Solution](https://github.com/asolace/Bootcamp-Prep/blob/master/Codelikethis-Labs/aA-Prepwork/lib/15_in_words.rb)
 	- A shortcut mathematically from the [MathBlog](http://www.mathblog.dk/project-euler-17-letters-in-the-numbers-1-1000/)
+* Some awesome [Fibonacci](https://github.com/asolace/Project-Euler/blob/master/files/fibonaccis.rb) tests
