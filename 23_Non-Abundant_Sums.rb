@@ -21,24 +21,34 @@
 # Find the sum of all the positive integers which cannot be written as the sum of
 # two abundant numbers.
 
-def sumFactors(n)
-	sum = 1
-	(2...Math.sqrt(n)).each do |num|
-		sum += n / num + num if n % num == 0
-	end
-	sum
-end
+def factorSum(n)
+  return 0 if n == 1
 
-
-def findAbundant
-  array = []
-
-  (1..28123).each do |n|
-    if sumFactors(n) > n
-      array << n
+  sum = 1
+  (2..Math.sqrt(n)).each do |i|
+    if n % i == 0
+      sum += n / i if i != Math.sqrt(n)
+      sum += i
     end
   end
-  
-  array
+
+  sum
 end
-p findAbundant
+
+def nonAbandantSum
+	abundants = (1..28123).select { |n| n < factorSum(n) }
+
+	result = []
+	abundants.each do |x|
+	  abundants.each do |y|
+	    sum = x+y
+	    break if sum > 28123
+	    result << sum
+	  end
+	end
+
+	result.uniq!
+	(1..28123).reject{ |n| result.include?(n)}.reduce(:+)
+end
+
+puts nonAbandantSum
